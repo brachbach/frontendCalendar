@@ -31,7 +31,7 @@ class EventCreator extends Component {
         <input type="text" name="title" onChange={this.handleTitleChange} />
         <p>Event description:</p>
         <input type="text" name="description" onChange={this.handleDescriptionChange} />
-        <p>Event date (mm-dd-yyyy):</p>
+        <p>Event date (yyyy-mm-dd):</p>
         <input type="text" name="date" onChange={this.handleDateChange} />
         <p>Event start time: (24-hour time, hh-mm)</p>
         <input type="text" name="startTime" onChange={this.handleStartTimeChange} />
