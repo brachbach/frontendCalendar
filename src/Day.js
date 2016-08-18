@@ -14,7 +14,12 @@ const Day = ({date, eventList, dayOfWeek, onEventClick}) => {
   const dateString = `${year}-${month}-${day}`;
 
   const eventsToDisplay = eventList.filter(event => event.date === dateString);
-  const formattedEvents = eventsToDisplay.map(event => <Event eventParams={event} onEventClick={onEventClick} idx="0" />)
+  const sortedEvents = eventsToDisplay.sort((eventA, eventB) => {
+    const timeNumA = Number(`${eventA.startTime.slice(0,2)}${eventA.startTime.slice(3,5)}`);
+    const timeNumB = Number(`${eventB.startTime.slice(0,2)}${eventB.startTime.slice(3,5)}`);
+    return timeNumA - timeNumB;
+  })
+  const formattedEvents = sortedEvents.map(event => <Event eventParams={event} onEventClick={onEventClick} idx="0" />)
   return (
     <div className="day">
       <h4>{dayOfWeek}</h4>
