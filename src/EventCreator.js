@@ -26,19 +26,22 @@ class EventCreator extends Component {
 
   render () {
     return (
-      <form>
-        <p>Event title:</p>
-        <input type="text" name="title" onChange={this.handleTitleChange} />
-        <p>Event description:</p>
-        <input type="text" name="description" onChange={this.handleDescriptionChange} />
-        <p>Event date (yyyy-mm-dd):</p>
-        <input type="text" name="date" onChange={this.handleDateChange} />
-        <p>Event start time: (24-hour time, hh-mm)</p>
-        <input type="text" name="startTime" onChange={this.handleStartTimeChange} />
-        <p>Event end time: (24-hour time, hh-mm)</p>
-        <input type="text" name="endTime" onChange={this.handleEndTimeChange} />
-        <button onClick={this.handleEventSubmission}>Submit</button>
-      </form>
+      <div>
+        <h3>Enter event details</h3>
+        <form>
+          <p>Event title:</p>
+          <input type="text" name="title" onChange={this.handleTitleChange} />
+          <p>Event description:</p>
+          <input type="text" name="description" onChange={this.handleDescriptionChange} />
+          <p>Event date (yyyy-mm-dd):</p>
+          <input type="text" name="date" onChange={this.handleDateChange} />
+          <p>Event start time: (24-hour time, hh-mm)</p>
+          <input type="text" name="startTime" onChange={this.handleStartTimeChange} />
+          <p>Event end time: (24-hour time, hh-mm)</p>
+          <input type="text" name="endTime" onChange={this.handleEndTimeChange} />
+          <button onClick={this.handleEventSubmission}>Submit</button>
+        </form>
+      </div>
     );
   }
 

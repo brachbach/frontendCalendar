@@ -1,8 +1,8 @@
 import React from 'react';
 import Event from './Event.js'
 
-const Events = ({eventList}) => {
-  const eventsToRender = eventList.map(event => <Event eventParams={event} />);
+const Events = ({eventList, onEventClick}) => {
+  const eventsToRender = eventList.map((event, idx) => <Event eventParams={event} onEventClick={onEventClick} idx={idx}/>);
 
   return (
     <div>

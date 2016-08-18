@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Event = ({eventParams}) => {
+const Event = ({eventParams, onEventClick, idx}) => {
   return (
-    <div>
+    <div onClick={function() {onEventClick(idx)}}>
       <h3>{eventParams.title}</h3>
       <p>{eventParams.description}</p>
       <p>{eventParams.date}</p>

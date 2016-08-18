@@ -49,6 +49,7 @@ Initial priorities:
 Adding on:
 -date validation
 -calendar - like view of some sort, whether it's more like a monthly view (no specific positions for dates) or more like a daily view (dates positioned by start/end times)
+-clear form on submit
 -use redux
 
 
