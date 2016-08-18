@@ -17,7 +17,7 @@ const Calendar = ({eventList, onEventClick}) => {
       <Day onEventClick={onEventClick} date={new Date(previousMon.getFullYear(), previousMon.getMonth(), previousMon.getDate() + 4)} eventList={eventList} dayOfWeek="Friday"/>
       <Day onEventClick={onEventClick} date={new Date(previousMon.getFullYear(), previousMon.getMonth(), previousMon.getDate() + 5)} eventList={eventList} dayOfWeek="Saturday"/>
       <Day onEventClick={onEventClick} date={new Date(previousMon.getFullYear(), previousMon.getMonth(), previousMon.getDate() + 6)} eventList={eventList} dayOfWeek="Sunday"/>
-    </div> //not sure if this works on the borders of years and months, will test.
+    </div>
   );
 
 }
