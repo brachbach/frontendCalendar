@@ -3,12 +3,14 @@ import './App.css';
 import EventCreator from './EventCreator.js';
 import EventEditor from './EventEditor.js';
 import Events from './Events.js';
+import Calendar from './Calendar.js';
 
 class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
       events: [], 
+      currentEventId: 0,
       creating: false,
       editing: false,
       eventToEdit: undefined
@@ -30,9 +32,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <p>To edit an event, click on it</p>
-        <button onClick={this.handleCreateEventClick}>Create event</button>
+        <h3>This week's events (click on an event to edit):</h3>
+        <Calendar eventList={this.state.events} onEventClick={this.handleEventClick}/>
+        <h3>All events (click on an event to edit): </h3>
         <Events eventList={this.state.events} onEventClick={this.handleEventClick}/>
+        <button onClick={this.handleCreateEventClick} id="createEvent">Create event</button>
         <hr />
         {createEditView}
       </div>
@@ -40,8 +44,10 @@ class App extends Component {
   }
 
   createEvent(event) {
+    event.id = this.state.currentEventId;
     this.setState({
       events: this.state.events.concat(event),
+      currentEventId: this.state.currentEventId + 1,
       creating: false
     });
     this.render();
@@ -65,11 +71,17 @@ class App extends Component {
     this.render();
   }
 
-  handleEventClick (key) {
+  handleEventClick (id) {
+    // this.setState({
+    //   creating: false,
+    //   editing: false,
+    // });
+    // this.render();
+
     this.setState({
       creating: false,
       editing: true,
-      eventToEdit: key
+      eventToEdit: id
     });
     this.render();
   }

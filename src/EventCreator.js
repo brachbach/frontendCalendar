@@ -39,7 +39,9 @@ class EventCreator extends Component {
           <input type="text" name="startTime" onChange={this.handleStartTimeChange} />
           <p>Event end time: (24-hour time, hh-mm)</p>
           <input type="text" name="endTime" onChange={this.handleEndTimeChange} />
-          <button onClick={this.handleEventSubmission}>Submit</button>
+          <div>
+            <button onClick={this.handleEventSubmission}>Submit</button>
+          </div>
         </form>
       </div>
     );

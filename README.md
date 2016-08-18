@@ -12,7 +12,16 @@ Design: It doesn’t need to look super pretty, but we want a simple, clean and 
 
 Finally, do the best you can. We will be evaluating on correctness and code abstraction/design.  Once you’re done, submit this either as a .zip file, or provide a link on GitHub. Please include a README that explains how to set up and run your project.
 
-
+To work on now:
+-sort events on a date by time (should be quite easy)
+-allow paging through the calendar, eliminating the need for the other view (not too bad)
+-input validation (not too bad)
+-refactor creating/editing events to a modal (moderately difficult)
+-make sure that calendar view generates the proper view on the border of months/years (based on how new Date() works, it should, but worth checking)
+-refactor event storage to be more performant (somewhat hard)
+-reset event creating and editing upon clicking on the create button or on an event (thought it would be trivial but couldn't get it right away)
+-small visual upgrades:
+  -wrap long words instead of overflowing (not so important)
 
 
 Key things:
@@ -48,9 +57,19 @@ Initial priorities:
 
 Adding on:
 -date validation
--calendar - like view of some sort, whether it's more like a monthly view (no specific positions for dates) or more like a daily view (dates positioned by start/end times)
--clear form on submit
+-calendar-like view of some sort, whether it's more like a monthly view (no specific positions for dates) or more like a daily view (dates positioned by start/end times)
+--I'm thinking maybe a weekly view, shows the current week M-Sun, and the events you have on each day
+--should allow you to flip through to other weeks
+--should eventually sort by time
+
+-make a calendar component
+-which will have a day component
+-for each day, find all the matching events
+-might make sense to start with figuring out how I'm going to get the days in a week
+
 -use redux
+
+
 
 
 
