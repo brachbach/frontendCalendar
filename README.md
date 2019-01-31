@@ -1,3 +1,5 @@
+(Context: this was from a 3-hr programming challenge from a job app, from a long long time ago)
+
 This was an interesting challenge! I feel that I was making steady progress and had a pretty clear sense of where to go next, and simply ran out of time to implement everything that I wanted to implement. 
 
 To run the app, go in your terminal to the folder containing the app and enter 
